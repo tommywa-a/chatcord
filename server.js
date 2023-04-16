@@ -11,7 +11,7 @@ const io = socketio(server)
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Run when a client connects
-oninput.on('connection', socket => {
+io.on('connection', socket => {
   console.log('New WS Connection...')
 })
 
